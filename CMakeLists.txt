@@ -9,6 +9,8 @@ project(my_cpp_class)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  roslib
+  my_custom_srv_msg_pkg
 )
 
 ## System dependencies are found with CMake's conventions
@@ -103,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES my_cpp_class
-#  CATKIN_DEPENDS roscpp
+ CATKIN_DEPENDS roscpp roslib my_custom_srv_msg_pkg
 #  DEPENDS system_lib
 )
 
